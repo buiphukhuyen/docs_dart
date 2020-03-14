@@ -1,4 +1,4 @@
-#**BÀI 2: LÀM QUEN VỚI NGÔN NGỮ DART (Phần 1)**
+# **BÀI 2: LÀM QUEN VỚI NGÔN NGỮ DART (Phần 1)**
 
 Sau khi tìm hiểu một số thông tin về Dart, những ưu điểm và cách cài đặt Dart
 thông qua bài 1. Ta sẽ tiếp tục làm quen với ngôn ngữ này.
@@ -222,17 +222,18 @@ hoặc `"""`);
 	multi-line string.""";
 
 --Kết quả:          
-       You can create                            
-       multi-line strings like this one.      
-		This is also a           
-		multi-line string.                 
+      	You can create                            
+       	multi-line strings like this one.      
+	This is also a           
+	multi-line string.                 
 ```
 
 Bạn có thể tạo `"raw"` string bằng cách thêm đằng trước **r**:
 
 ```dart
-var s = r"In a raw string, even \n isn't special.";
-```**_Chú thích_:** `Raw String` bạn có thể hiểu là nó sẽ hiển thị đúng như những gì bạn ghi lên, giả sử như đoạn code trên `\n` sẽ không được coi là xuống dòng nữa.
+	var s = r"In a raw string, even \n isn't special.";
+```
+**_Chú thích_:** `Raw String` bạn có thể hiểu là nó sẽ hiển thị đúng như những gì bạn ghi lên, giả sử như đoạn code trên `\n` sẽ không được coi là xuống dòng nữa.
 
 ### **Bool (Đúng/Sai)**
 
