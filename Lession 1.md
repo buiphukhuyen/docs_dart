@@ -1,9 +1,6 @@
-**BÀI 1:**
+**BÀI 1:GIỚI THIỆU NGÔN NGỮ DART**
 
-**GIỚI THIỆU NGÔN NGỮ DART**
-
-Sẽ thật thiếu sót khi chúng ta bỏ qua ngôn ngữ lập trình được dùng trong Flutter
-- Dart, vì vậy ở bài đầu tiên, ta sẽ cùng tìm hiểu về ngôn ngữ mới mẻ này.
+Sẽ thật thiếu sót khi chúng ta bỏ qua ngôn ngữ lập trình được dùng trong Flutter - Dart, vì vậy ở bài đầu tiên, ta sẽ cùng tìm hiểu về ngôn ngữ mới mẻ này.
 
 Những thứ ta sẽ tìm hiểu trong phần này:
 
@@ -19,14 +16,9 @@ Những thứ ta sẽ tìm hiểu trong phần này:
 
 -   Chạy thử và Phân tích code mẫu 1 chương trình Dart đơn giản?
 
-1.  **DART LÀ GÌ?**
+**I. DART LÀ GÌ?**
 
-Dart là ngôn ngữ lập trình đa mục đích ban đầu được phát triển bởi Google và sau
-đó được Ecma (ECMA-408) phê chuẩn làm tiêu chuẩn. Nó được sử dụng để xây dựng
-các ứng dụng web, server, máy tính để bàn và thiết bị di động. Dart là ngôn ngữ
-mã nguồn mở và miễn phí, được phát triển trên GitHub. Hiện nay Dart đã Release
-phiên bản 2.7 (Thời điểm 2/2020). Bạn có thể tham khảo những nguồn tài liệu
-chính thức của Dart tại:
+   Dart là ngôn ngữ lập trình đa mục đích ban đầu được phát triển bởi Google và sau đó được Ecma (ECMA-408) phê chuẩn làm tiêu chuẩn. Nó được sử dụng để xây dựng các ứng dụng web, server, máy tính để bàn và thiết bị di động. Dart là ngôn ngữ mã nguồn mở và miễn phí, được phát triển trên GitHub. Hiện nay Dart đã Release phiên bản 2.7 (Thời điểm 2/2020). Bạn có thể tham khảo những nguồn tài liệu chính thức của Dart tại:
 
 -   Trang chính thức: <https://dart.dev/>
 
@@ -34,11 +26,9 @@ chính thức của Dart tại:
 
 -   Thư việc packages: <https://pub.dev>
 
-1.  **TẠI SAO FLUTTER LẠI SỬ DỤNG DART?**
+   **1. TẠI SAO FLUTTER LẠI SỬ DỤNG DART?**
 
-Như đã nói ở trên, Dart được phát triển bởi Google, và Flutter cũng vậy. Google
-muốn viết (phát triển) một ngôn ngữ mà nó cải tiến hơn Javascript và hỗ trợ cả 2
-cách biên dịch là Just In Time (JIT) và Ahead Of Time (AOT):
+        Như đã nói ở trên, Dart được phát triển bởi Google, và Flutter cũng vậy. Google muốn viết (phát triển) một ngôn ngữ mà nó cải tiến hơn Javascript và hỗ trợ cả 2 cách biên dịch là Just In Time (JIT) và Ahead Of Time (AOT):
 
 -   Ahead Of Time (AOT): Với AOT thì trình biên dịch chuyển ngôn ngữ Dart thẳng
     sang Native Code giúp hiệu năng tốt nhất có thể (tức là khi chạy chương
