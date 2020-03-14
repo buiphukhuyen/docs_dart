@@ -229,7 +229,7 @@ Kết quả của đoạn mã trên như sau:
 Đoạn code đơn giản ở trên dùng nhiều đến những tính năng cơ bản trong Dart, ta
 sẽ cùng phân tích:
 
-###**Hàm main**
+### **Hàm main**
 
 Một ứng dụng Dart bắt đầu chạy từ hàm main, hàm này bắt buộc phải có, nó có thể
 có tham số như khai báo ở trên. Nếu ứng dụng không nhận tham số ở main thì có
@@ -243,7 +243,7 @@ main() {
 **Lưu ý:** Dart có phân biệt chữ hoa/thường nên khi đặt tên cho các thành phần
 hàm, biến... cần lưu ý. Hàm `main()` và hàm `maIn()` là khác nhau.
 
-###**Câu lệnh, khối lệnh**
+### **Câu lệnh, khối lệnh**
 
 Các lệnh trong Dart được viết mà các thành phần không bị ảnh hưởng bởi khoảng
 trắng, kết thúc một câu lệnh là dấu `;`
@@ -271,7 +271,7 @@ else {
 }
 ```
 
-###**Comment – chú thích Code**
+### **Comment – chú thích Code**
 
 Các chú thích đưa vào trong code thì không ảnh hưởng gì đến code, mục đích nó là
 mô tả để đọc lại dễ hiểu, có 2 loại chú thích.
@@ -299,7 +299,7 @@ tham khảo tới hàm, biến, lớp ... (tìm hiểu sau), nó giống PHPDoc 
 đích là để sinh ra tài liệu. Ví dụ nó phát sinh ra tài liệu tham khảo, để người
 khác đọc tài liệu này biết sử dụng lại logic của code.
 
-###**Nạp thư viện**
+### **Nạp thư viện**
 
 Dart cũng tổ chức code thành các thư viện, có những thư viện xây dựng sẵn như
 thư viện toán `dart:math` ... , cần dùng thư viện nào thì nạp nó vào bằng lệnh
@@ -349,3 +349,5 @@ Sum of a and b: 25
 Square root of 2 25 is 5
 ==============================================
 ```
+
+
