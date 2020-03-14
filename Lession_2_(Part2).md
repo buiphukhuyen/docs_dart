@@ -79,7 +79,7 @@ Các toán tử này thực hiện trên biểu thức `logic`, kết quả là 
 
 ###  **Biểu thức điều kiện**
 
-`biểu_thức_điều_kiện ? biểu_thức_1 : biểu_thức_2`
+**`biểu_thức_điều_kiện ? biểu_thức_1 : biểu_thức_2`**
 
 Biểu thức tổng hợp trên kết hợp từ ba biểu thức con (còn được gọi với cái tên
 khác là toán tử ba ngôi). Nếu `biểu_thức_điều_kiện` là `đúng` thì giá trị
@@ -91,7 +91,7 @@ tính theo `biểu_thức_1`, ngược lại là `biểu_thức_2`.
 	var c = (a > b) ? a : b; //Kết quả c = 10
 ```
 
-`biểu_thức_1 ?? biểu_thức_2`
+**`biểu_thức_1 ?? biểu_thức_2`**
 
 Biểu thức kết hợp với `??`, nếu `biểu_thức_1` **khác** `null` thì lấy
 `biểu_thức_1`, ngược lại lấy giá trị từ `biểu_thức_2`.
@@ -488,74 +488,53 @@ dụng toán tử ba ngôi:
 ## **CẤU TRÚC DỮ LIỆU THƯỜNG DÙNG**
 ### **Cấu trúc dữ liệu liệt kê Enum**
 
->   Trong Dart đây là một loại lớp đặc biệt, biểu diễn một tập hợp cố định các
->   hằng số. Để tạo ra một **enum** dùng từ khóa **enum** khai báo các phần tử
->   liệt kê theo tên cách nhau bởi **','** Ví dụ:
+Trong Dart đây là một loại lớp đặc biệt, biểu diễn một tập hợp cố định các hằng số. Để tạo ra một `enum` dùng từ khóa `enum` khai báo các phần tử liệt kê theo tên cách nhau bởi `,` Ví dụ:
 
->   enum UserGroup {guest, member, admin}
+```dart
+var user_group = UserGroup.admin;
+	switch (user_group) {
+    		case UserGroup.admin:
+      			print('Quản trị hệ thống');
+    			break;
+    		case UserGroup.guest:
+      			print('Khách');
+    			break;
+    		default:
+			print('Thành viên');
+	}
+//Kết quả: Quản trị hệ thống
+```
 
->   **Enum** rất tiện lợi dùng với câu lệnh **switch-case:**
+### **Cấu trúc dữ liệu Iterable**
 
->   var user_group = UserGroup.admin;
+`Iterable` là một lớp generic biểu diễn tập hợp dữ liệu mà có thể duyệt qua hết
+phần tử này đến phần tử khác. Nghĩa là nó hỗ trợ `moveNext()` để đi đến phần tử
+tiếp theo, lấy dữ liệu phần tử hiện tại bằng `iterator.current`.
 
->   switch (user_group) {
+Thường thì `Iterable` được tạo ra, liên kết với một loại kiểu dữ liệu tập hợp khác
+như List, Map... Xem các loại cấu trúc dữ liệu này để tìm hiểu về `Interable`
 
->   case UserGroup.admin:
+Duyệt qua các phần tử `Iterable`:
 
->   print('Quản trị hệ thống');
-
->   break;
-
->   case UserGroup.guest:
-
->   print('Khách');
-
->   break;
-
->   default:
-
->   print('Thành viên');
-
->   }
-
->   //Kết quả: Quản trị hệ thống
-
-1.  **Cấu trúc dữ liệu Iterable:**
-
-Iterable là một lớp generic biểu diễn tập hợp dữ liệu mà có thể duyệt qua hết
-phần tử này đến phần tử khác. Nghĩa là nó hỗ trợ moveNext() để đi đến phần tử
-tiếp theo, lấy dữ liệu phần tử hiện tại bằng iterator.current.
-
-Thường thì Iterable được tạo ra, liên kết với một loại kiểu dữ liệu tập hợp khác
-như List, Map... Xem các loại cấu trúc dữ liệu này để tìm hiểu về Interable
-
-Duyệt qua các phần tử Iterable:
-
->   //Sinh ra Iterable chứa 100 phần tử số từ 0 - đến 99
-
->   var iterable = Iterable.generate(100);
-
->   for (var item in iterable) {
-
->   print(item);
-
->   }
-
->   //Kết quả: 0
-
->   1
-
->   ...
-
->   99
+```dart
+//Sinh ra Iterable chứa 100 phần tử số từ 0 - đến 99
+	var iterable = Iterable.generate(100);
+	for (var item in iterable) {
+   	 	print(item);
+	}
+//Kết quả: 	0
+		1
+	       ...
+		99
+```
 
 Hoặc duyệt qua bằng forEach:
 
->   iterable.forEach((item) {
-
->   print(item);
-
->   });
+```dart
+	iterable.forEach((item) {
+    		print(item);
+	});
+```
 
 **Các phương thức / thuộc tính hay dùng trên mảng - danh sách:** [(Xem
 thêm)](https://api.dart.dev/stable/2.7.1/dart-core/Iterable-class.html)
@@ -569,70 +548,54 @@ thêm)](https://api.dart.dev/stable/2.7.1/dart-core/Iterable-class.html)
 | **last**        | Thuộc tính trả về phần tử đầu cuối                                         |
 | **forEach()**   | Duyệt qua các phần tử                                                      |
 
-1.  **Cấu trúc dữ liệu Danh sách – Mảng – List:**
+###  **Cấu trúc dữ liệu Danh sách – Mảng – LIST**
 
->   Trong Dart, danh sách (cũng là mảng) được định nghĩa từ lớp generic List, nó
->   chứa một tập hợp các dữ liệu - mỗi dữ liệu trong List là gọi là phần tử, vị
->   trí của nó xác định bằng chỉ số bắt đầu từ 0, truy cập đến mảng (danh sách)
->   dùng ký hiệu [] chứa chỉ số phần tử. Có 2 loại List, đó là loại mà số phần
->   tử có thể thay đổi và loại list có số phần tử cố định:
+ Trong Dart, danh sách (cũng là mảng) được định nghĩa từ lớp `generic List`, nó chứa một tập hợp các dữ liệu - mỗi dữ liệu trong `List` là gọi là phần tử, vị trí của nó xác định bằng chỉ số bắt đầu từ 0, truy cập đến mảng (danh sách) dùng ký hiệu `[]` chứa chỉ số phần tử. Có 2 loại `List`, đó là loại mà số phần tử có thể thay đổi và loại `list` có số phần tử cố định:
 
-1.  **Khởi tạo một mảng cố định:**
+ **Khởi tạo một mảng cố định**
 
->   //Khai báo mảng cố định 2 phần tử
+```dart
+//Khai báo mảng cố định 2 phần tử
+	var listState = List(2);
+//Khởi tạo các phần tử trong mảng
+	listState[0] = 'on';
+	listState[1] = 'off';
+//Nếu truy cập listState[2] sẽ lỗi - vì List chỉ có 2 phần tử
+	print(listState); 	//[on, off]
+```
 
->   var listState = List(2);
-
->   //Khởi tạo các phần tử trong mảng
-
->   listState[0] = 'on';
-
->   listState[1] = 'off';
-
->   //Nếu truy cập listState[2] sẽ lỗi- vì List chỉ có 2 phần tử
-
->   print(listState); //[on, off]
-
-1.  **Khởi tạo một mảng thay đổi số phần tử được:**
+ **Khởi tạo một mảng thay đổi số phần tử được**
 
 Nếu khi khởi tạo mà không chỉ ra số lượng phần tử thì nó là mảng thay đổi số
 phần tử được, lúc này có thể áp dụng các hàm thêm, bớt phần tử sẽ nói phía dưới:
 
->   //Khai báo mảng thay đổi được
-
->   var day = List();
-
->   //Thêm các phần tử vào mảng
-
->   day.add('Monday');
-
->   day.add('Tuesday');
-
->   day.add('Thursday');
-
->   print(day); //[Monday, Tuesday, Thursday]
-
->   //Xóa phần tử cuối cùng
-
->   day.removeLast();
-
->   print(day); //[Monday, Tuesday]
+```dart
+//Khai báo mảng thay đổi được
+	var day = List();
+//Thêm các phần tử vào mảng
+	day.add('Monday');
+	day.add('Tuesday');
+	day.add('Thursday');
+	print(day);             //[Monday, Tuesday, Thursday]
+//Xóa phần tử cuối cùng
+	day.removeLast();
+	print(day);             //[Monday, Tuesday]
+```
 
 Nếu muốn tạo ra mảng thay đổi được, và khởi tạo luôn dữ liệu ở phần khai báo thì
-dùng ký hiệu **[]**
+dùng ký hiệu **`[]`**
 
->   //Khởi tạo mảng với 2 phần tử
-
->   var group = ['member', 'admin'];
-
->   group.insert(0, 'guest'); //Chèn phần tử vào vị trí 0
-
->   print(group); //[guest, member, admin]
+```dart
+//Khởi tạo mảng với 2 phần tử
+	var group = ['member', 'admin'];
+	group.insert(0, 'guest'); 		//Chèn phần tử vào vị trí 0
+	print(group);             		//[guest, member, admin]
+```
 
 **Các phương thức / thuộc tính hay dùng trên mảng - danh sách** [(Xem
 thêm)](https://api.dart.dev/stable/2.7.1/dart-core/List-class.html)
 
-Ngoài các phương thức - thuộc tính giống như [Iterable](#Iterable) chú ý thêm:
+Ngoài các phương thức - thuộc tính giống như [**`Iterable`**](#Iterable) chú ý thêm:
 
 | **Phương thức**   | **Sử dụng**                                                                     |
 |-------------------|---------------------------------------------------------------------------------|
@@ -645,68 +608,50 @@ Ngoài các phương thức - thuộc tính giống như [Iterable](#Iterable) c
 | **removeLast()**  | Xóa bỏ phần tử cuối                                                             |
 | **removeRange()** | Xóa bỏ phần tử từ vị trí start đến vị trí end removeRange(start, end)           |
 
-1.  **Cấu trúc dữ liệu Ánh xạ - Map:**
+### **Cấu trúc dữ liệu Ánh xạ - MAP**
 
-Đây là kiểu tập hợp dữ liệu mà mỗi phần tử biểu diễn theo cặp **key:value**
+Đây là kiểu tập hợp dữ liệu mà mỗi phần tử biểu diễn theo cặp **`key:value`**
 
-Các phần tử của Map được truy cập bằng ký hiệu [] chứa key dạng map[key]
+Các phần tử của `Map` được truy cập bằng ký hiệu `[]` chứa `key` dạng `map[key]`
 
-Khởi tạo Map có thể dùng Contructors hoặc khởi tạo luôn một số phần tử bằng {}
+Khởi tạo `Map` có thể dùng `Contructors` hoặc khởi tạo luôn một số phần tử bằng `{ }`
 
->   //Tạo một map, khới tạo luôn 3 key - name, age, score
+```dart
+//Tạo một map, khới tạo luôn 3 key - name, age, score
+  	var student = {
+    		'name':'Bui Phu Khuyen',
+    		'age': 22,
+    		'score': 'A'
+  	};
+  	student['subject'] = 'Dart Language'; 	//Thêm một phần tử
+  	print(student['name']);      		 	//Truy cập phần tử
+	print(student['subject']);    		
+//Kết quả:
+	Bui Phu Khuyen
+	Dart Language
+```
 
->   var student = {
+Cũng hoàn toàn tạo ra `Map` từ `Contructors Map()`:
 
->   'name':'Bui Phu Khuyen',
-
->   'age': 22,
-
->   'score': 'A'
-
->   };
-
->   student['subject'] = 'Dart Language'; //Thêm một phần tử
-
->   print(student['name']); //Truy cập phần tử
-
->   print(student['subject']);
-
->   //Kết quả:
-
->   Bui Phu Khuyen
-
->   Dart Language
-
-Cũng hoàn toàn tạo ra Map từ Contructors Map():
-
->   var student = Map();
-
->   student['name'] = 'Bui Phu Khuyen';
-
->   student['age'] = 22;
-
->   student['score'] = 'A';
-
->   //Duyệt qua các phần tử (cách 1)
-
->   student.forEach((key, value) {
-
->   print('\$key : \$value');
-
->   });
-
->   //Duyệt qua tất cả các phần tử Map (cách 2)
-
->   for (var key in student.keys) {
-
->   print('\$key : \${student[key]}');
-
->   }
+```dart
+	var student = Map();
+  	student['name']   = 'Bui Phu Khuyen';
+  	student['age']    = 22;
+  	student['score']  = 'A';
+//Duyệt qua các phần tử (cách 1)
+  	student.forEach((key, value) {
+    		print('$key : $value');
+  	});
+//Duyệt qua tất cả các phần tử Map (cách 2)
+  	for (var key in student.keys) {
+    		print('$key :  ${student[key]}');
+  	}
+```
 
 **Các phương thức / thuộc tính hay dùng trên Map** [(Xem
 thêm)](https://api.dart.dev/stable/2.7.1/dart-core/Map-class.html)
 
-Ngoài các phương thức - thuộc tính giống như [Iterable](#Iterable) chú ý thêm:
+Ngoài các phương thức - thuộc tính giống như [**`Iterable`**](#Iterable) chú ý thêm:
 
 | **Phương thức**   | **Sử dụng**                                        |
 |-------------------|----------------------------------------------------|
@@ -715,42 +660,39 @@ Ngoài các phương thức - thuộc tính giống như [Iterable](#Iterable) c
 | **containsKey()** | containsKey(key) kiểm tra phần tử với key tồn tại  |
 | **remove()**      | remove(key) xóa phần tử khỏi Map                   |
 
-1.  **Cấu trúc dữ liệu Tập hợp – Set:**
+### **Cấu trúc dữ liệu Tập hợp – SET**
 
 Tập hợp như tên gọi là là tập hợp các phần tử, đảm bảo sao cho mỗi phần tử chỉ
 được xuất hiện 1 lần.
 
-Khởi tạo một tập hợp bằng Contructors với cú pháp:
+Khởi tạo một tập hợp bằng `Contructors` với cú pháp:
 
->   var elements = Set();
+```dart
+			var elements = Set();
+```
 
-Hoặc có thể khởi tạo luôn một số phần tử bằng {}
+Hoặc có thể khởi tạo luôn một số phần tử bằng `{ }`
 
->   var halogens = {'chlorine', 'bromine', 'iodine', 'astatine'};
+```dart
+			var halogens = {'chlorine', 'bromine', 'iodine', 'astatine'};
+```
 
 **Các phương thức / thuộc tính hay dùng trên Set** [(Xem
 thêm)](https://api.dart.dev/stable/2.7.1/dart-core/Set-class.html)
 
 Nó có các phương thức và cách duyệt qua phần tử giống phần trình bày
-[Iterable](#Iterable) ở trên.
+[**Iterable**](#Iterable) ở trên.
 
-Để thêm một phần tử vào tập hợp dùng hàm add(ele); để loại bỏ phần tử dùng hàm
-remove(ele);, kiểm tra xem có chứa phần tử bằng hàm contains(ele);...
+Để thêm một phần tử vào tập hợp dùng hàm `add(ele);`, để loại bỏ phần tử dùng hàm
+`remove(ele);`, kiểm tra xem có chứa phần tử bằng hàm `contains(ele);`...
 
->   var halogens = {'chlorine', 'bromine'}; //Khởi tạo Set bằng {}
-
->   var elements = Set(); //Khởi tạo Set bằng Contructors
-
->   elements.add('fluorine'); //Thêm phần tử vào elements
-
->   elements.add('chlorine'); (1) //Thêm phần tử vào elements
-
->   elements.addAll(halogens);(2) //Thêm các phần từ halogens vào elements
-
->   print(elements);
-
->   //Kết quả: {fluorine, chlorine, bromine}
-
->   //Giải thích: Vì Set elements đã thêm phần tử 'chlorine' ở dòng lệnh (1) nên
->   khi qua lệnh (2) chỉ lấy thêm phần tử 'bromine' trong Set halogens (Đảm bảo
->   tính chất của Tập hợp Set – đảm bảo phần tử chỉ xuất hiện 1 lần)
+```dart
+var halogens = {'chlorine', 'bromine'}; //Khởi tạo Set bằng {}
+	var elements = Set();  	//Khởi tạo Set bằng Contructors
+	elements.add('fluorine'); 	//Thêm phần tử vào elements
+	elements.add('chlorine'); (1)  //Thêm phần tử vào elements
+	elements.addAll(halogens);(2)	//Thêm các phần từ halogens vào elements
+	print(elements);
+//Kết quả: 		{fluorine, chlorine, bromine}
+//Giải thích: Vì Set elements đã thêm phần tử 'chlorine' ở dòng lệnh (1) nên khi qua lệnh (2) chỉ lấy thêm phần tử 'bromine' trong Set halogens (Đảm bảo tính chất của Tập hợp Set – đảm bảo phần tử chỉ xuất hiện 1 lần)
+```dart
