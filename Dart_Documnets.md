@@ -1,33 +1,3 @@
-![](media/625b691ace62f8f7416055e35b9f30c1.png)
-
-**BỘ GIÁO DỤC VÀ ĐÀO TẠO**
-
-![](media/d6b7273a15218d69f68cc673babd983c.png)
-
-![](media/cf40923447c20041377117b5f515bd49.tiff)
-
-**Tài liệu Tham khảo**
-
-**CÔNG NGHỆ PHẦN MỀM**
-
-**TÌM HIỂU NGÔN NGỮ**
-
-**DART**
-
->   **Sinh viên**
-
->   Bùi Phú Khuyên - 1611061839
-
-**LỜI MỞ ĐẦU**
-
-**LỜI CẢM ƠN**
-
-*Sinh viên*
-
-*Bùi Phú Khuyên*
-
-**MỤC LỤC**
-
 **BÀI 1:**
 
 **GIỚI THIỆU NGÔN NGỮ DART**
@@ -81,7 +51,7 @@ cách biên dịch là Just In Time (JIT) và Ahead Of Time (AOT):
 
 ![](media/00486169de8b83ff34c1c2e0493286c9.png)
 
-1.  **ƯU ĐIỂM CỦA DART:**
+**1. ƯU ĐIỂM CỦA DART:**
 
 -   **Năng suất:** Cú pháp Dart rõ ràng và súc tích, công cụ của nó đơn giản
     nhưng mạnh mẽ. Type-safe giúp bạn xác định sớm các lỗi tinh tế. Dart có các
