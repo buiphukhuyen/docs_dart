@@ -79,8 +79,10 @@ Nếu như bạn học Dart, hãy luôn ghi nhớ những khái niệm quan tr�
 -   Kiểu type của 1 variable (biến) là optional bởi vì Dart có thể tự suy ra
     type dựa trên giá trị truyền vào cho biến. Ví dụ:
 
-` var number = 42;
-//biến number được hiểu là kiểu int. `
+```dart 
+var number = 42;
+//biến number được hiểu là kiểu int. 
+```
 
 - Khi bạn muốn khai báo 1 variable mà type của nó không được xác định, hãy sử dụng [type dynamic](https://dart.dev/guides/language/effective-dart/design#do-annotate-with-object-instead-of-dynamic-to-indicate-any-object-is-allowed).
 
@@ -181,18 +183,20 @@ Bạn có thể dùng bất kỳ trình soạn thảo text nào để viết cod
 [DartPad](https://dartpad.dartlang.org/)), giờ bạn tạo ra một file đặt tên là
 **hello.dart** với nội dung:
 
-`main() {
+```dart
+main() {
 	print('Hello World!');
-}`
+}
+```
 
 Đoạn mã trên in ra màn hình dòng chữ: Hello World!. Để chạy bạn gõ lệnh từ
 Terminate (Command Prompt) như sau:
 
->   \# cd \<thư mục chứa file hello.dart\>
-
->   \# dart hello.dart
-
->   Hello World!
+```dart
+# cd \<thư mục chứa file hello.dart\>
+# dart hello.dart
+Hello World!
+```
 
 Tiếp theo ta tìm hiểu thêm từ một chương trình đơn giản sau:
 
