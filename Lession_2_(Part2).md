@@ -342,13 +342,15 @@ thoát khỏi vòng lặp. Ví dụ:
 
 Lệnh **`continue`** còn dùng để nhảy đến một khối lệnh có nhãn bằng cú pháp:
 
-  **`continue  nhãn_khối_lệnh;`**
-
+```dart
+  		continue  nhãn_khối_lệnh;
+```
 Lệnh **`break`** còn dùng để hủy thi hành khối lệnh bên ngoài có nhãn, với cú
 pháp:
 
- **`break nhãn_khối_lệnh_ngoài;`**
-
+```dart
+		break nhãn_khối_lệnh_ngoài;
+```
 Phần nói về các đối tượng có kiểu liệt kê được (Ví dụ như mảng, danh sách ...),
 còn có các lệnh duyệt qua từng phần tử liệt kê được đó với các lệnh `for ...
 in, for ... of.`
@@ -357,8 +359,9 @@ in, for ... of.`
 
 Dart cung cấp lệnh:
 
-  **`Assert(biểu_thức_logic);`**
-
+```dart
+  		Assert(biểu_thức_logic);
+```
 Để khi chạy mà biểu thức logic sai sẽ dừng chương trình ở đó. **`Assert`** là cách
 để kiểm tra một biểu thức, vấn đề là nó không có ảnh hưởng gì khi chạy ở chế độ
 product nó chỉ tác dụng khi phát triển (Chạy debug Ctrl + F5 trong VS)
@@ -483,8 +486,9 @@ câu lệnh (`statement`).
 Ví dụ: Bạn **không thể** để `if statement` đằng sau `=>` được. Tuy nhiên bạn có thể sử
 dụng toán tử ba ngôi:
 
-   **`condition ? expr1 : expr2`**
-
+```dart
+   			condition ? expr1 : expr2
+```
 ## **CẤU TRÚC DỮ LIỆU THƯỜNG DÙNG**
 ### **Cấu trúc dữ liệu liệt kê Enum**
 
@@ -595,7 +599,7 @@ dùng ký hiệu **`[]`**
 **Các phương thức / thuộc tính hay dùng trên mảng - danh sách** [(Xem
 thêm)](https://api.dart.dev/stable/2.7.1/dart-core/List-class.html)
 
-Ngoài các phương thức - thuộc tính giống như [**`Iterable`**](#Iterable) chú ý thêm:
+Ngoài các phương thức - thuộc tính giống như [**`Iterable`**](#cấu-trúc-dữ-liệu-iterable) chú ý thêm:
 
 | **Phương thức**   | **Sử dụng**                                                                     |
 |-------------------|---------------------------------------------------------------------------------|
@@ -651,7 +655,7 @@ Cũng hoàn toàn tạo ra `Map` từ `Contructors Map()`:
 **Các phương thức / thuộc tính hay dùng trên Map** [(Xem
 thêm)](https://api.dart.dev/stable/2.7.1/dart-core/Map-class.html)
 
-Ngoài các phương thức - thuộc tính giống như [**`Iterable`**](#Iterable) chú ý thêm:
+Ngoài các phương thức - thuộc tính giống như [**`Iterable`**](#cấu-trúc-dữ-liệu-iterable) chú ý thêm:
 
 | **Phương thức**   | **Sử dụng**                                        |
 |-------------------|----------------------------------------------------|
@@ -681,7 +685,7 @@ Hoặc có thể khởi tạo luôn một số phần tử bằng `{ }`
 thêm)](https://api.dart.dev/stable/2.7.1/dart-core/Set-class.html)
 
 Nó có các phương thức và cách duyệt qua phần tử giống phần trình bày
-[**Iterable**](#Iterable) ở trên.
+[**Iterable**](#cấu-trúc-dữ-liệu-iterable) ở trên.
 
 Để thêm một phần tử vào tập hợp dùng hàm `add(ele);`, để loại bỏ phần tử dùng hàm
 `remove(ele);`, kiểm tra xem có chứa phần tử bằng hàm `contains(ele);`...
@@ -693,6 +697,6 @@ var halogens = {'chlorine', 'bromine'}; //Khởi tạo Set bằng {}
 	elements.add('chlorine'); (1)  //Thêm phần tử vào elements
 	elements.addAll(halogens);(2)	//Thêm các phần từ halogens vào elements
 	print(elements);
-//Kết quả: 		{fluorine, chlorine, bromine}
+//Kết quả: 	{fluorine, chlorine, bromine}
 //Giải thích: Vì Set elements đã thêm phần tử 'chlorine' ở dòng lệnh (1) nên khi qua lệnh (2) chỉ lấy thêm phần tử 'bromine' trong Set halogens (Đảm bảo tính chất của Tập hợp Set – đảm bảo phần tử chỉ xuất hiện 1 lần)
-```dart
+```
