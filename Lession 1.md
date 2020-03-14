@@ -194,7 +194,7 @@ Terminate (Command Prompt) như sau:
 ```dart
 # cd \<thư mục chứa file hello.dart\>
 # dart hello.dart
-Kết quả:
+//Kết quả:
 Hello World!
 ```
 
@@ -307,7 +307,7 @@ thư viện toán `dart:math` ... , cần dùng thư viện nào thì nạp nó 
 kể cả nạp một file `.dart` cũng dùng `import`.
 
 ```dart
-import 'dart:math'; //Nạp thư viện toán
+import 'dart:math'; 	//Nạp thư viện toán
 //Do có nạp math, mà giờ đây có hàm tính căn bậc 2 sqrt
 print(sqrt(9));
 ```
@@ -327,17 +327,17 @@ là trong `main.dart` gọi được hàm `banner()`;
 
 ```dart
 import 'dart:math'; 
-import 'banner.dart'; 		//Nạp thư viện tự xây dựng
+import 'banner.dart'; 			//Nạp thư viện tự xây dựng
 ...
 main(List<String> args) { 
-	banner(); 				//Được gọi hàm trong thư viện banner.dart 
+	banner(); 					//Được gọi hàm trong thư viện banner.dart 
 	var sum;                 	 
 	var a = 10;            	 
 	sum = sumInt(a, 15);   	 
 	print('Sum of a and b: $sum'); 
 	var sqrtvalue = sqrt(sum); 
 	print('Square root of 2 of $sum is $sqrtvalue');
-	banner();  				//Được gọi hàm trong thư viện banner.dart
+	banner();  					//Được gọi hàm trong thư viện banner.dart
 }
 ```
 
