@@ -80,8 +80,7 @@ Nếu như bạn học Dart, hãy luôn ghi nhớ những khái niệm quan tr�
     type dựa trên giá trị truyền vào cho biến. Ví dụ:
 
 ```dart 
-var number = 42;
-//biến number được hiểu là kiểu int. 
+var number = 42;   //Biến number được hiểu là kiểu int. 
 ```
 
 - Khi bạn muốn khai báo 1 variable mà type của nó không được xác định, hãy sử dụng [type dynamic](https://dart.dev/guides/language/effective-dart/design#do-annotate-with-object-instead-of-dynamic-to-indicate-any-object-is-allowed).
@@ -181,7 +180,7 @@ triển các ứng dụng thực sự, bạn cần có SDK.
 
 Bạn có thể dùng bất kỳ trình soạn thảo text nào để viết code Dart (hoặc sử dụng
 [DartPad](https://dartpad.dartlang.org/)), giờ bạn tạo ra một file đặt tên là
-**hello.dart** với nội dung:
+`hello.dart` với nội dung:
 
 ```dart
 main() {
@@ -189,54 +188,39 @@ main() {
 }
 ```
 
-Đoạn mã trên in ra màn hình dòng chữ: Hello World!. Để chạy bạn gõ lệnh từ
+Đoạn mã trên in ra màn hình dòng chữ: `Hello World!`. Để chạy bạn gõ lệnh từ
 Terminate (Command Prompt) như sau:
 
 ```dart
 # cd \<thư mục chứa file hello.dart\>
 # dart hello.dart
+Kết quả:
 Hello World!
 ```
 
 Tiếp theo ta tìm hiểu thêm từ một chương trình đơn giản sau:
 
->   import 'dart:math'; //Nạp thư viện
-
->   ///Hàm tính tổng sumInt ///
-
->   ///Tính tổng 2 số nguyên
-
->   ///Trả về tổng 2 số nguyên ...
-
->   sumInt(int a, int b) {
-
->   return a + b;
-
->   }
-
->   /\*\*
-
->   \* Hàm main là điểm mồi ứng dụng bắt đầu chạy từ
-
->   \* hàm này
-
->   \*/
-
->   main(List\<String\> args) {
-
->   var sum; //Khai báo một biến
-
->   var a = 10; //Khai báo và khởi tạo biến luôn
-
->   sum = sumInt(a, 15); //Gọi hàm sumInt
-
->   print('Sum of a and b: \$sum');
-
->   var sqrtvalue = sqrt(sum);
-
->   print('Square root of 2 of \$sum is \$sqrtvalue');
-
->   }
+```dart
+import 'dart:math'; //Nạp thư viện 
+///Hàm tính tổng sumInt /// 
+///Tính tổng 2 số nguyên 
+///Trả về tổng 2 số nguyên ... 
+sumInt(int a, int b) { 
+	return a + b; 
+} 
+/** 
+* Hàm main là điểm mồi ứng dụng bắt đầu chạy từ 
+* hàm này 
+*/ 
+main(List<String> args) { 
+	var sum;                 		//Khai báo một biến 
+	var a = 10;            			//Khai báo và khởi tạo biến luôn 
+	sum = sumInt(a, 15);   			//Gọi hàm sumInt 
+	print('Sum of a and b: $sum'); 
+	var sqrtvalue = sqrt(sum); 
+	print('Square root of 2 of $sum is $sqrtvalue'); 
+}
+```
 
 Kết quả của đoạn mã trên như sau:
 
@@ -245,141 +229,123 @@ Kết quả của đoạn mã trên như sau:
 Đoạn code đơn giản ở trên dùng nhiều đến những tính năng cơ bản trong Dart, ta
 sẽ cùng phân tích:
 
-1.  **Hàm main:**
+###**Hàm main**
 
 Một ứng dụng Dart bắt đầu chạy từ hàm main, hàm này bắt buộc phải có, nó có thể
 có tham số như khai báo ở trên. Nếu ứng dụng không nhận tham số ở main thì có
 thể chỉ cần khai báo:
 
->   main() {
-
->   // ...
-
->   }
-
+```dart
+main() {
+	// ...
+}
+```
 **Lưu ý:** Dart có phân biệt chữ hoa/thường nên khi đặt tên cho các thành phần
-hàm, biến... cần lưu ý. Hàm main() và hàm maIn() là khác nhau.
+hàm, biến... cần lưu ý. Hàm `main()` và hàm `maIn()` là khác nhau.
 
-1.  **Câu lệnh, khối lệnh:**
+###**Câu lệnh, khối lệnh**
 
 Các lệnh trong Dart được viết mà các thành phần không bị ảnh hưởng bởi khoảng
-trắng, kết thúc một câu lệnh là dấu **;**
+trắng, kết thúc một câu lệnh là dấu `;`
 
->   //Câu lệnh
+```dart
+//Câu lệnh
+return a + b;
 
->   return a + b;
-
->   //Viết lại như sau là tương đương
-
->   return
-
->   a
-
->   \+
-
->   b;
+//Viết lại như sau là tương đương
+return
+        a
+            +
+    b;
+```
 
 Một nhóm các lệnh nhóm lại với nhau được gọi là một khối lệnh, trong Dart nó sử
-dụng cặp dấu **{}** để tạo khối. Khối lệnh có thể lồng nhau.
+dụng cặp dấu `{}` để tạo khối. Khối lệnh có thể lồng nhau.
 
->   if (a \> 1) {
+```dart
+if (a > 1) {
+    //Khối lệnh 1
+}
+else {
+    //Khối lệnh 2
+}
+```
 
->   //Khối lệnh 1
-
->   }
-
->   else {
-
->   //Khối lệnh 2
-
->   }
-
-1.  **Comment – chú thích Code:**
+###**Comment – chú thích Code**
 
 Các chú thích đưa vào trong code thì không ảnh hưởng gì đến code, mục đích nó là
 mô tả để đọc lại dễ hiểu, có 2 loại chú thích.
 
-*Chú thích 1 dòng* các chữ phía sau ký hiệu // không ảnh hưởng gì tới code
+***Chú thích 1 dòng*** các chữ phía sau ký hiệu `//` không ảnh hưởng gì tới code
 
->   // Đây là chú thích trên 1 dòng
+```dart
+// Đây là chú thích trên 1 dòng
+```
 
-*Chú thích nhiều dòng* các dòng chữ nằm giữa ký hiệu /\* và \*/ không ảnh hưởng
+***Chú thích nhiều dòng*** các dòng chữ nằm giữa ký hiệu `/*` và `*/` không ảnh hưởng
 gì tới code.
 
->   /\*
+```dart
+/*
+    Đây
+    là chú thích
+    nhiều dòng
+*/
+```
 
->   Đây
-
->   là chú thích
-
->   nhiều dòng
-
->   \*/
-
-*Chú thích Documentation* là dòng chữ phía sau ký hiệu ///, nó tương tự như chú
+***Chú thích Documentation*** là dòng chữ phía sau ký hiệu `///`, nó tương tự như chú
 thích 1 dòng, nhưng nội dung viết trong nó viết theo một quy tắc nhất định để
 tham khảo tới hàm, biến, lớp ... (tìm hiểu sau), nó giống PHPDoc trong PHP. Mục
 đích là để sinh ra tài liệu. Ví dụ nó phát sinh ra tài liệu tham khảo, để người
 khác đọc tài liệu này biết sử dụng lại logic của code.
 
-1.  **Nạp thư viện:**
+###**Nạp thư viện**
 
 Dart cũng tổ chức code thành các thư viện, có những thư viện xây dựng sẵn như
-thư viện toán dart:math ... , cần dùng thư viện nào thì nạp nó vào bằng lệnh
-import. Bạn cũng sẽ tự xây dựng các thư viện cho mình và nạp vào bằng cách này,
-kể cả nạp một file .dart cũng dùng import.
+thư viện toán `dart:math` ... , cần dùng thư viện nào thì nạp nó vào bằng lệnh
+`import`. Bạn cũng sẽ tự xây dựng các thư viện cho mình và nạp vào bằng cách này,
+kể cả nạp một file `.dart` cũng dùng `import`.
 
->   import 'dart:math'; //Nạp thư viện toán
+```dart
+import 'dart:math'; //Nạp thư viện toán
+//Do có nạp math, mà giờ đây có hàm tính căn bậc 2 sqrt
+print(sqrt(9));
+```
 
->   //Do có nạp math, mà giờ đây có hàm tính căn bậc 2 sqrt
+Trở lại dự án trên của bạn, giờ bạn tạo ra một file khác đặt tên là `banner.dart`
 
->   print(sqrt(9));
+Nội dung file có định nghĩa hàm `banner()`
 
-Trở lại dự án trên của bạn, giờ bạn tạo ra một file khác đặt tên là banner.dart
+```dart
+void banner() {
+ 	print("==============================================");
+}
+```
 
-Nội dung file có định nghĩa hàm banner()
+Sau đó trở lại `main.dart`, nạp file này vào bằng lệnh `import 'banner.dart';`, vậy
+là trong `main.dart` gọi được hàm `banner()`;
 
->   void banner() {
-
->   print("==============================================");
-
->   }
-
-Sau đó trở lại main.dart, nạp file này vào bằng lệnh import 'banner.dart';, vậy
-là trong main.dart gọi được hàm banner();
-
->   import 'dart:math';
-
->   import 'banner.dart'; //Nạp thư viện tự xây dựng
-
->   ...
-
->   main(List\<String\> args) {
-
->   banner(); //Được gọi hàm trong thư viện banner.dart
-
->   var sum;
-
->   var a = 10;
-
->   sum = sumInt(a, 15);
-
->   print('Sum of a and b: \$sum');
-
->   var sqrtvalue = sqrt(sum);
-
->   print('Square root of 2 of \$sum is \$sqrtvalue');
-
->   banner(); //Được gọi hàm trong thư viện banner.dart
-
->   }
+```dart
+import 'dart:math'; 
+import 'banner.dart'; 		//Nạp thư viện tự xây dựng
+...
+main(List<String> args) { 
+	banner(); 				//Được gọi hàm trong thư viện banner.dart 
+	var sum;                 	 
+	var a = 10;            	 
+	sum = sumInt(a, 15);   	 
+	print('Sum of a and b: $sum'); 
+	var sqrtvalue = sqrt(sum); 
+	print('Square root of 2 of $sum is $sqrtvalue');
+	banner();  				//Được gọi hàm trong thư viện banner.dart
+}
+```
 
 Kết quả của chương trình:
 
->   ==============================================
-
->   Sum of a and b: 25
-
->   Square root of 2 25 is 5
-
->   ==============================================
+```dart
+==============================================
+Sum of a and b: 25
+Square root of 2 25 is 5
+==============================================
+```
