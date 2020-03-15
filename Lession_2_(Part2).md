@@ -173,7 +173,7 @@ dùng `switch` với cú pháp.
       			break;
     		default :
       			//Khối lệnh mặc định
-}
+	}
 ```
 
 Giá trị của `biểu_thức` được so sánh với các giá trị `giá_trị_1`, `giá_trị_2`
@@ -192,7 +192,7 @@ var t = 1;
       			print('Phu'); break;
     		default:
       			print('Khuyen');
-} 
+	} 
 //Kết quả: Phu
 ```
 
@@ -203,7 +203,7 @@ Cú pháp:
 ```dart
 for (statement1; statement2; statement3) {
    	 	//Khối lệnh thi hành
-	}
+}
 ```
 
 -   **`statement1`** lệnh thi hành trước khi vòng lặp `for` bắt đầu.
@@ -290,8 +290,8 @@ Giống với vòng lặp **`while`** nhưng khối lệnh thi hành luôn mà k
 lặp lại hay không. Cú pháp như sau:
 
 ```dart
-do {
-   		//Khối lệnh
+	do {
+	   		//Khối lệnh
 	}
 	while (condition);
 ```	
@@ -437,7 +437,7 @@ double Sum(double a, [double b, double c]) {
     			result += b;
    		result += (c!=null) ?  c: 0;
 		return result;
-	}
+}
 	print(Sum(1));       //1.0
 	print(Sum(1,2));     //3.0;
 	print(Sum(1,2,3));   //6.0;
@@ -452,7 +452,7 @@ số đó, thì nó sẽ nhận mặc định. Ví dụ:
 ```dart
 double Sum(double a, {double b=1, double c=2}) {
   		return a + b + c;
-	}
+}
 	var result_1 = Sum(1);
 	print(result_1);  //4.0
 	var result_2 = Sum(1, c:10);
@@ -698,5 +698,7 @@ var halogens = {'chlorine', 'bromine'}; //Khởi tạo Set bằng {}
 	elements.addAll(halogens);(2)	//Thêm các phần từ halogens vào elements
 	print(elements);
 //Kết quả: 	{fluorine, chlorine, bromine}
-//Giải thích: Vì Set elements đã thêm phần tử 'chlorine' ở dòng lệnh (1) nên khi qua lệnh (2) chỉ lấy thêm phần tử 'bromine' trong Set halogens (Đảm bảo tính chất của Tập hợp Set – đảm bảo phần tử chỉ xuất hiện 1 lần)
+//Giải thích: Vì Set elements đã thêm phần tử 'chlorine' ở dòng lệnh (1) nên khi qua lệnh (2) chỉ lấy 
+thêm phần tử 'bromine' trong Set halogens (Đảm bảo tính chất của Tập hợp Set – đảm bảo 
+sphần tử chỉ xuất hiện 1 lần)
 ```
